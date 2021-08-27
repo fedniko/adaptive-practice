@@ -1,0 +1,62 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+}
+body {
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background: #0000FF;
+    font-size: 25px;
+    line-height: 29px;
+    color: #FFFFFF;
+    padding-left: 30px;
+}
+.blocks {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.blocks__item {
+    height: 165px;
+    font-size: 25px;
+    line-height: 29px;
+    font-weight: bold;
+    border: 5px solid #000000;
+    margin-bottom: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.blocks__item:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 376px) {
+    .blocks {
+      flex-direction: row;
+    }
+    .blocks__item {
+        width: 40%;
+        height: 300px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .blocks__item:nth-last-child(-n+2) {
+        margin-bottom: 0;
+    }
+    .blocks__item:nth-child(even) {
+        margin-right: 0;
+    }
+}
